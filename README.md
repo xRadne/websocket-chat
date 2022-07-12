@@ -8,8 +8,8 @@ Please refer to it to learn how to run this application.
 
 You can also spin up a free Heroku dyno to test it out:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/socketio/chat-example)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/xRadne/websocket-chat)
 
 Or run it on [Repl.it](https://repl.it/):
 
-[![Run on Repl.it](https://repl.it/badge/github/socketio/chat-example)](https://repl.it/github/socketio/chat-example)
+[![Run on Repl.it](https://repl.it/badge/github/xRadne/websocket-chat)](https://repl.it/github/xRadne/websocket-chat)
