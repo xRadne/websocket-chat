@@ -126,6 +126,8 @@
       const current = new Set(Object.keys(data));
       const added = [...current].filter(x => !previous.has(x));
       const removed = [...previous].filter(x => !current.has(x));
+      
+      const renamed = [...current].filter(x => previous.has(x)).filter(x => users[x].name !== data[x].name);
 
       if (previous.size > 0) {
         added.forEach(id => {
@@ -136,6 +138,15 @@
       removed.forEach(id => {
         appendChatMessage(`${users[id].name} has left the chat`);
         delete users[id];
+      });
+
+      renamed.forEach(id => {
+        if (id === socket.id) {
+          appendChatMessage(`You are now known as ${data[id].name}`);
+        } else {
+          appendChatMessage(`${users[id].name} is now known as ${data[id].name}`);
+        }
+        users[id].name = data[id].name;
       });
 
       users = data;
